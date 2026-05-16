@@ -1,39 +1,47 @@
-import React from 'react';
+import { useState } from 'react';
 
 function TodoForm() {
-    return (
-        <div className='todo-form'>
-            <h2>Criar tarefa</h2>
+    const [value, setValue] = useState("");
+    const [category, setCategory] = useState("");
 
-            <form>
-                <input
-                    type="text"
-                    placeholder='Digite o título'
+    const handledSubmit =  (e) => {
+        e.preventDefault();
+        console.log("Enviou form!");
+    }
+
+
+return (
+<div className='todo-form'>
+<h2>Criar tarefa</h2>
+<form onSubmit={handledSubmit}>
+            <input
+                 type="text"
+                placeholder='Digite o título'
                 />
 
-                <select>
-                    <option value="">
+            <select>
+                <option value="">
                         Selecione uma categoria
-                    </option>
+                </option>
 
-                    <option value="Trabalho">
+                <option value="Trabalho">
                         Trabalho
-                    </option>
+                </option>
 
-                    <option value="Pessoal">
+                <option value="Pessoal">
                         Pessoal
-                    </option>
+                 </option>
 
-                    <option value="Estudos">
+                <option value="Estudos">
                         Estudos
-                    </option>
-                </select>
+                </option>
+            </select>
 
-                <button type='submit'>
+            <button type='submit'>
                     Criar tarefa
-                </button>
-            </form>
-        </div>
+            </button>
+        </form>
+    </div>
     );
 }
 
