@@ -4,13 +4,14 @@ body {
   background-color: #f4f4f4;
   padding: 30px;
   color: #333;
-  background-image: url('./img/lenovo.jpg');
+  background-image: url('./img/Captura\ de\ tela\ 2026-01-28\ 144638.png');
   background-position: center;
   background-size:auto
 }
 
 .app {
   max-width: 600px;
+
   margin: 0 auto;
   background-color: #efefef;
   padding: 20px 30px;
@@ -86,4 +87,20 @@ input, select {
   border: 1px solid #ddd;
   border-radius: 3px;
   width: 100%;
+}
+
+.filter, .search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
 }
